@@ -3,7 +3,8 @@ using AdminEmpleadosNegocio;
 
 namespace AdminEmpleadosFront
 {
-    public partial class FrmAdminEmpleados : Form  // herencia, es que la clase hereda de formulario
+    public partial class FrmAdminEmpleados : Form  // herencia, es que la clase hereda de formulario 
+
     {
         List<Empleado> empleadosList = new List<Empleado>();
 
@@ -22,7 +23,7 @@ namespace AdminEmpleadosFront
             string textoBuscar = txtBuscar.Text.Trim().ToUpper();
 
             //declaro el parametro
-            Empleado parametro = new Empleado();
+            Empleado parametro = new Empleado();// de las propidades de la entidad empleado
 
             //asigno el nombre ingresado
             if (!String.IsNullOrEmpty(textoBuscar.Trim()))
@@ -32,7 +33,7 @@ namespace AdminEmpleadosFront
             }
 
             //seteo el nuevo filtro de anulados usando el valor del checkbox
-            parametro.anulado = chkVerAnulados.Checked;
+            parametro.anulado = chkVerAnulados.Checked; // setea 
 
             //Busco la lista de empleados en la capa de negocio, pasandole el parametro ingresado
             empleadosList = EmpleadosNegocio.Get(parametro);

@@ -7,7 +7,7 @@ namespace AdminEmpleadosNegocio
     {
         public static List<Empleado> Get(Empleado e)
         {
-            return EmpleadosDatosEF.Get(e);
+            return EmpleadosDatosEF.Get(e); // voy hasta la capa de negocio
         }
 
         public static int DeleteAnulados()
